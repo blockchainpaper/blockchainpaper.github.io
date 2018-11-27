@@ -3,74 +3,30 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="main.js"></script>
     <title></title>
-    <link rel="icon" href="http://www.frm.utn.edu.ar/UTN.ico">
   </head>
-  <body background-color=#FFFFFF>
-  <style>
-    
-    a.nav-link:link {
-    color: #0521F0;
-    background-color: #dbdbdb;
-    text-decoration: none;
-    }
-    
-    a.body-link:link {
-    color: #0521F0;
-    background-color:#00000;
-    text-decoration: underline;
-    }
-    
-    
-    a.body-link:hover {
-        background-color:#00000;
-        color:#0521F0;
-        text-decoration: none;
-    }
-    
-    a:hover {
-        background-color: #dbdbdb;
-        color: #0521F0;
-        text-decoration: none;
-    }
-
-    a.active {
-        background-color: #dbdbdb;
-        color: #0521F0;
-        margin: 4;
-        padding: 4;
-        text-decoration: none;
-    } 
-    
-    div.texto {
-      text-align: justify;
-      border: 2px; 
-      padding: 35px 110px;
-    }
-    </style>
-    
-   
+  <body background="body-bg.png">
 
     <div class="title-div">
       <div style="padding: 30px;">
-          <p class="title-style">Proyecto de Investigación Bitcoin</p>
+          <p class="title-style">Paper Prioridades en la Blockchain</p>
           <p class="subtitle-style"> 2018 </p>
       </div>
       <img src="https://www.frba.utn.edu.ar/wp-content/uploads/logo-premio-prueba-3-baja-B.png" width="500" height="100">
     </div>
 
     <div class="header-nav">
-      <div class = "nav-link">
-      <a class="active" text-decoration= none href= "https://morsamatias.github.io">Investigación ▼</a>
-      </div>
-      <a class="nav-link" href ="https://morsamatias.github.io/integrantes">Integrantes ▼</a>
-      <a class="nav-link" href = "https://morsamatias.github.io/papers">Papers Publicados ▼</a>
-      <a class="nav-link" href = "https://morsamatias.github.io/links">Exposiciones ▼</a>
+      <a id= "inv-nav" class="nav-link">Investigación</a>
+      <a id= "members-nav" class="nav-link pipe-divisor">Integrantes</a>
+      <a id= "papers-nav" class="nav-link pipe-divisor">Papers Publicados</a>
+      <a id= "links-nav" class="nav-link pipe-divisor">Contacto</a>
     </div>
-    
-      
-      <div class = "texto">
-        <b><strong><br/>Abstract:</strong></b>El bitcoin y la tecnología blockchain se proclama como un 
+
+    <div id="investigation" class="link">
+
+      <div class = "content-title"><b><strong><br/>Abstract:</strong></b>El bitcoin y la tecnología blockchain se proclama como un 
         fenómeno disruptivo a nivel mundial, solo comparable con el auge de las .com o de internet mismo. 
         Por ello es de vital importancia  entender su funcionamiento, sus consecuencias y su futuro. 
         Su gran limitación de escalabilidad son las demoras y las altas comisiones que se deben pagar 
@@ -79,9 +35,73 @@
         es comprender la naturaleza con la que se generan los famosos “cuellos de botella” y establecer un 
         criterio objetivo para medir la eficiencia de la cantidad de colas de espera. Para ello utilizaremos 
         las técnicas de Simulación (modelo dinámico) para obtener el tiempo de atención aproximado en cada cola.<br/>
-          
-          </br><a class="body-link" href="https://github.com/blockchainpaper/blockchainpaper.github.io/blob/master/708-1201-1-SM.pdf">Seguir leyendo...</a>
+      
+	</div>
 
-      </div>
-  </body>
+    <div id="members" class="link">
+      <div class = "content-title"> <strong> Alumnos </strong> </div>
+      </br> Matias Morsa
+      </br> Yamila Casarini</br>
+    </div>
+
+    <div id="papers" class="link">
+      <b><strong><br/><a href = "https://drive.google.com/open?id=1Me486LmVt_WYJi4_Y5-jTRCRgTBa3oLY" target="_blank">Simulación de espera en la blockchain - Este paper se publicara en diciembre de 2018</a></br></strong></b>
+    </div>
+
+    <div id="contacto" class="link">
+		<div class="row">
+			<div class="container">
+
+									<!-- START HERE -->
+				   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css">
+				   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+				   <!-- Style The Contact Form How Ever You Prefer -->
+				   <link rel="stylesheet" href="https://cdn.rawgit.com/dwyl/learn-to-send-email-via-google-script-html-no-server/master/style.css">
+
+				  <form id="gform" method="POST" class="pure-form pure-form-stacked" data-email="example@email.net"
+				  action="https://script.google.com/macros/s/AKfycbxlGrNTBORdlbbVUIXzEZ-2tpMsrRF97GRxCB9P802GK2xPaAxJ/exec">
+					<!-- change the form action to your script url -->
+
+					<fieldset class="pure-group">
+					  <label for="name">Nombre: </label>
+					  <input id="name" name="name" placeholder="Tu nombre" />
+					</fieldset>
+
+					<fieldset class="pure-group">
+					  <label for="message">Mensaje: </label>
+					  <textarea id="message" name="message" rows="5"
+					  placeholder="Mensaje..."></textarea>
+					</fieldset>
+
+					<fieldset class="pure-group">
+					  <label for="email">Direccion de Email:</label>
+					  <input id="email" name="email" type="email" value=""
+					  required placeholder="ejemplo@email.com"/>
+					  <span id="email-invalid" style="display:none">
+						Se debe ingresar un email valido</span>
+					</fieldset>
+
+
+
+					<button class="button-success pure-button button-xlarge">
+					  <i class="fa fa-paper-plane"></i>&nbsp;Enviar</button>
+
+				  </form>
+
+				  <!-- Customise the Thankyou Message People See when they submit the form: -->
+				  <div style="display:none;" id="thankyou_message">
+					<h2><em>Gracias</em> 
+					  Te responderemos a la brevedad</h2>
+				  </div>
+					 <!-- Submit the Form to Google Using "AJAX" -->
+				<script data-cfasync="false" type="text/javascript"
+				src="mail-sender.js"></script>				 
+  
+				  <!-- <script data-cfasync="false" type="text/javascript"
+				  src="/form-submission-handler.js"></script> -->
+				<!-- END -->
+				</div>	  
+		</div>
+    </div>
+	</body>
 </html>
